@@ -2,16 +2,42 @@
 	text-align: center;
 }
 
-.white {
-	background: #fff;
-}
-.black {
-	background: #111;
-	color: #fff;
+.keyOuter {
+	display: inline-block;
+	position: relative;
+	height: 200px;
 }
 
 .key {
-	height: 200px;
-	border: 1px solid #e9e9e9;
 	outline: none;
+	color: transparent;
+	cursor: pointer;
+	transition: all .25s ease;
+}
+
+.white {
+	background: #fff;
+	width: 40px;
+	border: 1px solid #c0c0c0;
+	height: 100%;
+}
+
+.white:hover {
+	background: #e8ffe8;
+}
+
+.black {
+	position: absolute;
+	top: 95px;
+	left: -12px;
+	height: 140px;
+	background: #050505;
+	width: 25px;
+	border: none;
+	z-index: 10;
+	border-radius: 0 0 5px 5px;
+}
+
+.black:hover {
+	background: #0d0d0d;
 }

@@ -12,18 +12,14 @@ const NotesLine = (props) => {
 	} else {
 		return (
 			<div className={`${classes.line} ${emptyness}`}>{}</div>
-		)		
+		)
 	}
 
 }
 
 class TrainingLines extends React.Component {
 
-	constructor(props) {
-		super(props);
-	}
-
-	render() {	
+	render() {
 		return (
 			<div className={classes.outer}>
 				<div className={classes[this.props.keys]}>
@@ -32,12 +28,12 @@ class TrainingLines extends React.Component {
 					}
 					{this.props.keys === 'trebleLines' &&
 						<img src="graphics/treble-clef.svg" alt="treble clef"/>
-					}					
-					{this.props.lines.map((value, index) => {			
+					}
+					{this.props.lines.map((value, index) => {
 						return (
 							<NotesLine key={index} empty={value.empty} note={value.note} current={index === this.props.current}/>
 						)
-					})}									
+					})}
 				</div>
 			</div>
 		)

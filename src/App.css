@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+
 * {
   outline: none !important;
 }
+
 body {
   background: linear-gradient(-45deg, #c21ef1, #f73c7e);
   height: 100vh;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .app__outer {
@@ -12,6 +16,7 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
 }
+
 .app__inner {
   margin: 0 auto;
   align-self: flex-end;

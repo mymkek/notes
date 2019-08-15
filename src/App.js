@@ -21,7 +21,7 @@ class App extends React.Component {
 	}
 
 	changeKey(key) {
-		if(this.state.currentKeys != key) {
+		if(this.state.currentKeys !== key) {
 			this.setState({
 				currentNote: this.randomInteger(0, this.props.data.keys[this.state.currentKeys].length - 1),
 				currentKeys: key
@@ -29,26 +29,34 @@ class App extends React.Component {
 		}
 	}
 
-	changeNote(pressed) {
+	checkNote(pressed) {
 		let currentNote = this.props.data.keys[this.state.currentKeys][this.state.currentNote].note;
 
 		if(pressed === currentNote) {
-			let newNote = this.randomInteger(0, this.props.data.keys[this.state.currentKeys].length - 1);
-			while(true) {
-				//новая нота не должна быть равна предыдущей, если сгенерировалось такое же число меняем, пока не будет другое
-				if(newNote === currentNote) {
-					newNote = this.randomInteger(0, this.props.data.keys[this.state.currentKeys].length - 1);
-				} else {
-					this.setState({
-						currentNote: newNote
-					});
-					break;
-				}
-			}
-			return;
+			this.changeNote();
+			return "correct";
 		} else {
-			alert('Incorrect')
+			this.showError();
 		}
+	}
+
+	changeNote() {
+		let newNote = this.randomInteger(0, this.props.data.keys[this.state.currentKeys].length - 1);
+		while(true) {
+			//новая нота не должна быть равна предыдущей, если сгенерировалось такое же число меняем, пока не будет другое
+			if(newNote === this.state.currentNote) {
+				newNote = this.randomInteger(0, this.props.data.keys[this.state.currentKeys].length - 1);
+			} else {
+				this.setState({
+					currentNote: newNote
+				});
+				break;
+			}
+		}
+	}
+
+	showError() {
+		alert('Incorrect');
 	}
 
 	render() {
@@ -57,7 +65,7 @@ class App extends React.Component {
 				<Header onClick={key => this.changeKey(key)}/>
 				<div className="app__inner">
 					<TrainingLines current={this.state.currentNote} keys={this.state.currentKeys} lines={this.props.data.keys[this.state.currentKeys]}/>
-					<TrainingKeyboard onClick={i => this.changeNote(i)}/>
+					<TrainingKeyboard onClick={i => this.checkNote(i)}/>
 				</div>
 			</div>
 		);
