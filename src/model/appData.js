@@ -29,7 +29,7 @@ let appData = {
 		]
 	},
 	config: {
-		currentKey: 'trebleLines'
+		currentKey: 'bassLines'
 	}
 }
 

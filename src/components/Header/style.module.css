@@ -4,6 +4,61 @@
 	padding: 15px 25px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	width: 100%;
-	height: 25px;
+	height: 35px;
+}
+.logo {
+	font-weight: bold;
+}
+.settings {
+	cursor: pointer;
+	border: 1px solid #fff;
+	padding: 5px 10px;
+	border-radius: 3px;
+	background: transparent;
+	color: #fff;
+	transition: all .25s ease-in-out;
+}
+.settings:hover {
+	color: #111;
+	background: #fff;
+}
+.settingsPanel {
+	position: absolute;
+	right: 10px;
+	top: 60px;
+	background: #fff;
+	padding: 25px;
+	border-radius: 7px;
+	box-shadow: 0 0 40px 4px rgba(0,0,0,.1);
+}
+.settingsPanel::before {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	top: -8px;
+	right: 40px;
+	transform: rotate(-45deg);
+}
+.settingKey button {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border: none;
+	background: #fff;
+	border-bottom: 2px dashed #e1e1e1;
+	padding: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.settingKey button:hover {
+	background: #f3f3f3;
+}
+.settingKey button img {
+	width: 30px;
+	margin-right: 15px;
 }
