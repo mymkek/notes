@@ -1,0 +1,17 @@
+.keyboard {
+	text-align: center;
+}
+
+.white {
+	background: #fff;
+}
+.black {
+	background: #111;
+	color: #fff;
+}
+
+.key {
+	height: 200px;
+	border: 1px solid #e9e9e9;
+	outline: none;
+}

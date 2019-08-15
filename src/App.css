@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e);
+  height: 100vh;
+}
+
+.app__outer {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.app__inner {
+  margin: 0 auto;
+  align-self: flex-end;
+}

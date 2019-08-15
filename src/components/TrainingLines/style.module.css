@@ -1,0 +1,53 @@
+.outer {
+	background: #fff;
+	max-width: 550px;
+	width: 550px;
+	margin: 0 auto 10%;
+	padding: 40px;
+	border-radius: 7px;
+	-webkit-box-shadow: 0 0 40px 4px rgba(0,0,0,.1);
+	box-shadow: 0 0 40px 4px rgba(0,0,0,.1);
+	position: relative;
+}
+.line {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #111;
+	margin: 5px 0;
+}
+.empty {
+	background: #fff;
+}
+.bassLines img {
+	position: absolute;
+	width: 44px;
+	height: auto;
+	top: 52px;
+	user-select: none;
+	z-index: 20;
+}
+.trebleLines img {
+	position: absolute;
+	width: 60px;
+	height: auto;
+	top: 62px;
+	user-select: none;
+	left: 23px;
+	z-index: 20;
+}
+
+.note {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 25%;
+}
+.note img {
+	width: 30px;
+	height: auto;
+	position: relative;
+	top: -22px;
+	z-index: 40;
+}
