@@ -34,9 +34,9 @@ class App extends React.Component {
 
 		if(pressed === currentNote) {
 			this.changeNote();
-			return "correct";
+			return true;
 		} else {
-			this.showError();
+			return false;
 		}
 	}
 
@@ -53,10 +53,6 @@ class App extends React.Component {
 				break;
 			}
 		}
-	}
-
-	showError() {
-		alert('Incorrect');
 	}
 
 	render() {
